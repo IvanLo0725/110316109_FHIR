@@ -48,7 +48,7 @@
             apiURL = document.getElementById("fullURL").value;
             HTTPGetData(apiURL); 
             */
-           apiURL ="https://fhir.tcumi.com:58443/r5/fhir/Patient/5311";
+           apiURL ="https://fhir.tcumi.com:58443/r5/fhir/Observation?subject=5311";
            //apiURL ="https://hapi.fhir.tw/fhir/Patient";
         
            //HTTPGetData(apiURL); 
@@ -75,10 +75,11 @@ if (bundle.resourceType === "Bundle") {
    const entry = bundle.entry[i]; 
     thisResource =bundle.entry[i].resource;
     id= thisResource.id;
-    name =  thisResource.name[0].text;
+    //name =  thisResource.name[0].text;
+    var value2=thisResource.valueQuantity.value;
     output +=  id;
     output += ',';
-    output +=  name;
+    output +=  value2;
     output += '\n';
     }
     document.getElementById("TextArea1").value = output;  
