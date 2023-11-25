@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -18,15 +18,15 @@
          "gender": "",
          "birthDate": "2003-07-25",      
          "managingOrganization": {
-             "reference": "Organization/23538250"
+             "reference": "Organization/98a6f5c5-af58-41b5-bd6f-d8ca996b5580"
          } 
      };
      
 	 
    function postData() {
-     /*   var data = myObj.valueQuantity.value;
-       alert(data);  */
-      // alert("aaaa");
+        var data = myObj.valueQuantity;
+       alert(data);  
+       //alert("aaaa");
        myObj.name[0].family = document.getElementById("familyName").value;
        myObj.name[0].given[0] = document.getElementById("givenName").value;
        myObj.name[0].text =  myObj.name[0].family + myObj.name[0].given[0];
@@ -38,19 +38,19 @@
            {myObj.gender = "female";    }  
 
        var jsonStr = JSON.stringify(myObj);
-     //  alert(jsonStr);
+       alert(jsonStr);
 
        var apiURL;
        apiURL = FHIRrootURL + '/' + "Patient";
-      // alert(apiURL);
-     //  HTTPPostData(apiURL, jsonStr);
+      alert(apiURL);
+       //HTTPPostData(apiURL, jsonStr);
        sendHttpPost(apiURL, jsonStr, callBack);
 	
 
 	}
     function callBack(ret) {
         console.log(ret);    
-        //alert(ret);
+        alert(ret);
         }
 
 </script>	
