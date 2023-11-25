@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -75,7 +75,7 @@
             var selected = resourceID.options[resource.selectedIndex].text;
             var apiURL;
             apiURL = rootURL + selected;
-           // HTTPPostData(apiURL, dataString);
+            //HTTPPostData(apiURL, dataString);
             sendHttpPost(apiURL, dataString, callBack);
         }
         function callBack(ret) {
