@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -29,7 +29,7 @@
         </div>
     </div>
     <script>
-        
+        /*
         document.getElementById("rootURLText").value = FHIRrootURL;
         function createFullURL() {
             var rootURL = document.getElementById("rootURLText").value;
@@ -41,17 +41,17 @@
             if (searchP != '')
                 apiURL = apiURL + '?' + searchP;
             document.getElementById("fullURL").value = apiURL;
-        }
+        }*/
         function getData() {
-            var dataString = document.getElementById("fullURL").value;
+            /*var dataString = document.getElementById("fullURL").value;
             var apiURL;
             apiURL = document.getElementById("fullURL").value;
             HTTPGetData(apiURL); 
-            
-           apiURL ="http://hapi.fhir.org/baseR4/Patient?organization=23538150";
+            */
+           apiURL ="https://fhir.tcumi.com:58443/r5/fhir/?subject=5310";
            apiURL ="https://hapi.fhir.tw/fhir/Patient";
         
-           HTTPGetData(apiURL); 
+           //HTTPGetData(apiURL); 
           sendHttpGet(apiURL,callBack );
         }
 
