@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -76,7 +76,7 @@
             apiURL = FHIRrootURL + selected;
             var searchP = document.getElementById("searchP").value;
             if (searchP != '')
-                apiURL = apiURL + '?' + searchP;
+                apiURL = apiURL + '/' + searchP;
             document.getElementById("fullURL").value = apiURL;
         }
         function getData() {
